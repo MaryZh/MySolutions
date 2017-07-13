@@ -12,18 +12,16 @@ public class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         // this is to ensure j is non-negative; if m>n, then (m+n+1)/2 <m
         if(nums1.length>nums2.length){
-            int[] temp = nums1.clone();
-            nums1 = nums2.clone();
-            nums2 = temp.clone();
+            return findMedianSortedArrays(nums2,nums1);
         }
 
         int m = nums1.length, n =nums2.length;
         // find perfect i(satisfying the second condition) use binary search
-        int imin =0, imax =m, i=0,j=0;
+        int imin =0, imax =m, mid = (m+n+1)/2, i=0,j=0;
         int left_max = 0, right_min=0;
         while(imin<=imax){
             i = (imax+imin)/2;
-            j = (m+n+1)/2-i;
+            j = mid-i;
             
             if(i<m && nums2[j-1]>nums1[i])  // if i is too small, or j is too large
                 imin = i+1;
