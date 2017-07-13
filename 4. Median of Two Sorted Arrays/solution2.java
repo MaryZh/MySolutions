@@ -1,3 +1,4 @@
+// This solution has time complexity O(log(mind(m,n)))
 // The idea is that based on the definition of a median of an array of length n: dividing a set into two equal length subset, that  one subset if always greater than the other.
 // If we do a random cut at (i-1 / i) with i=0~m, (lenfth of left_part) = i, (lenfth of left_part) = n-i. And a median satisfies: (1) length(left_part) == length(right_part), (2) max(left_part) < min(right_part)
 
