@@ -1,5 +1,5 @@
 // Time complexity: O(N^2)
-// For each number in the array, use binary search to find the sum: nums[lo]+nums[hi] = sum-nums[i]
+// For each number in the array, use bi-directional search to find the sum: nums[lo]+nums[hi] = sum-nums[i]
 // Note avoid duplicates
 
 public class Solution {
