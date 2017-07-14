@@ -17,7 +17,7 @@ public class Solution {
             for(int i=start; i<nums.length; i++){
                 templist.add(nums[i]);
                 backtrack(nums, res, templist, target - nums[i], i);    // start from i since each number is reusable
-                templist.remove(templist.size()-1); // after exhaust research for current num, remove it and try the next num
+                templist.remove(templist.size()-1); // after exhaust search for current num, remove it and try the next num
             }
         }
     }
