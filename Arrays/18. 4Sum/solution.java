@@ -21,7 +21,7 @@ public class Solution {
                             }
                             else if(nums[lo]+nums[hi]< target- (nums[i]+nums[j])){
                                 // this skip duplicate elements and thus improve performance; note: has to put it before low++
-                            while(lo<hi && nums[lo+1] == nums[lo])
+                                while(lo<hi && nums[lo+1] == nums[lo])
                                     lo++;
                                 lo ++;
                             }
