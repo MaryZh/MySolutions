@@ -1,6 +1,5 @@
 public class Solution {
     public List<List<Integer>> combinationSum3(int k, int n) {
-        int[] nums = new int[9];
         List<List<Integer>> res = new ArrayList<>();
         backtrack(res, new ArrayList<Integer>(), k, n, 1);
         return res;
