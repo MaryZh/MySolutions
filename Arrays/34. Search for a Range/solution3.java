@@ -1,5 +1,6 @@
 // Search for the left end of the range of (target) use binary search,  and that of (target +1).
-// firstGreaterEqual finds the left end of the range if the target exists, and the first number greater than the target if it doesn't exist. // Basically, high = n (not n-1) is important.
+// firstGreaterEqual finds the left end of the range if the target exists, and the first number greater than the target if it doesn't exist. 
+// Basically, high = n (not n-1) is important.
 //
 // Time complexity: O(Log N)
  
