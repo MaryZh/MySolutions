@@ -6,6 +6,7 @@ public class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] res = new int[2];
         int n = nums.length;
+        // find the position of one target by binary search 
         int lo = 0, hi = n-1, mid=0;
         boolean found =false;
         while(lo <= hi){
@@ -21,7 +22,7 @@ public class Solution {
         }
         if(found == false)
             return new int[]{-1,-1};
-        
+        // search it's left and right sides
         int start =mid, end = mid;
         if(mid >0){
             int k =mid;
