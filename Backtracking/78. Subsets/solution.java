@@ -10,7 +10,7 @@ public class Solution {
         
         for(int i=start; i<nums.length; i++){
             templist.add(nums[i]);
-            backtrack(nums, res, templist,i+1, used);
+            backtrack(nums, res, templist,i+1);
             templist.remove(templist.size()-1);
         }
         
