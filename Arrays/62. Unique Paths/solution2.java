@@ -3,7 +3,7 @@
 // So we can use a m*n matrix to store the # of path to research each element.
 //
 // Optimization:  only need to keep the # of path for current row(cur = new int[m]). i.e. initialize cur as 1 for 0th row.
-// Then starting from 1st row, cur[i] += cur[i-1];
+// Then starting from 1st row, cur[i] += cur[i-1]
 
 public class Solution {
     public int uniquePaths(int m, int n) {
