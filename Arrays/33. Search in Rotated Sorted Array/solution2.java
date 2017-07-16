@@ -18,7 +18,7 @@ public class Solution {
             if(nums[mid]>nums[hi])  // this means mid is in the 1st sort part; min is in the second part, so start search from lo=mid+1
                 lo = mid+1; // the loop will go to here as long as mid is in the 1st part, and mentain hi = n-1.
             else
-                 hi = mid;   // by end of "if", mid is in the 2nd part
+                 hi = mid;   // by end of "if", lo is in the 2nd part
         }
         return lo;
     }
