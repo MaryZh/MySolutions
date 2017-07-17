@@ -1,4 +1,4 @@
-// bottom -up solution. Use only one extra array.
+// bottom -up solution. Use only one extra array. 8ms(64.7%).
 
 public class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
