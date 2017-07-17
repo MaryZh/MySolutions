@@ -1,3 +1,5 @@
+// 4ms
+
 public class Solution {
     public int majorityElement(int[] nums) {
         // method #2
