@@ -7,7 +7,7 @@ public class Solution {
         int[] sum =  new int[n+1];
         for(int i=1; i<n+1; i++)
             sum[i] = sum[i-1]+nums[i-1];
-        // for any subarray: start=i, end=j, check is the sum>=s or not
+        // for any subarray: start=i, end=j, check is the sum=k or not
         int res = 0;
         for(int i =1; i<n+1; i++){
             for(int j=i; j<n+1; j++){ // j>=i
