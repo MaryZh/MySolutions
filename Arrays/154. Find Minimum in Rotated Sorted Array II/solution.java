@@ -1,3 +1,6 @@
+// This can find the correct min value, but the index might be wrong/
+// Eg. [1,1,1,2,1,1], the index this algorithms returns is 0.
+
 public class Solution {
     public int findMin(int[] nums) {
         int n = nums.length;
