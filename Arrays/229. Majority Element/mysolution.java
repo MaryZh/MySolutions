@@ -1,3 +1,5 @@
+// The question asks for O(n) solution. However, sort takes O(n Log n). So this doesn't really satisfy the requirements.
+
 public class Solution {
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> res = new ArrayList<>();
