@@ -1,14 +1,6 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
+// The logic to find the begin of cycle is here: 
+// https://discuss.leetcode.com/topic/2975/o-n-solution-by-using-two-pointers-without-change-anything
+
 public class Solution {
     public ListNode detectCycle(ListNode head) {
         // first determine if there is cycle or not
