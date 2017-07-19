@@ -1,4 +1,4 @@
-// Recursive method
+// Recursive method. 9ms.
 
 /**
  * Definition for singly-linked list.
