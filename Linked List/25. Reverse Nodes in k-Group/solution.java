@@ -1,4 +1,4 @@
-// Same idea as 92
+// My solution. Same idea as 92. 9ms.
 
 /**
  * Definition for singly-linked list.
