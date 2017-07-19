@@ -1,4 +1,4 @@
-// Same idea as (92. Reverse Linked List II)
+// Same idea as (92. Reverse Linked List II). 6ms.
 
 /**
  * Definition for singly-linked list.
