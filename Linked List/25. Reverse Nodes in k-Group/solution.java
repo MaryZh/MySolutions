@@ -1,3 +1,5 @@
+// Same idea as 92
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
