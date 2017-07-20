@@ -1,6 +1,6 @@
 // Merge-sort. Since this is a recursive method, the space complexity is actually O(log n), not O(1).
 
- * Definition for singly-linked list.
+/* Definition for singly-linked list.
  * public class ListNode {
  *     int val;
  *     ListNode next;
