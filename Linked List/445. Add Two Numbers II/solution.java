@@ -21,9 +21,8 @@ public class Solution {
         }
         // add number in stack2 to stack1
         ListNode cur = null, head= null;
-        int carry =0;
+        int sum =0;
         while( !stack1.isEmpty() || !stack2.isEmpty() ){
-            int sum =carry;
             if(!stack1.isEmpty()){
                 sum += stack1.pop();
             }
@@ -32,12 +31,12 @@ public class Solution {
             }
             head = new ListNode(sum%10);
             head.next = cur;
-            carry = sum/10;
+            sum /= 10;
             cur = head;
         }
         
-        if(carry == 1){
-            head = new ListNode(carry);
+        if(sum == 1){
+            head = new ListNode(sum);
             head.next = cur;
         }
         return head;
