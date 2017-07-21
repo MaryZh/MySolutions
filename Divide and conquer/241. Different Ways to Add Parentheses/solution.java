@@ -12,7 +12,7 @@ public class Solution {
                 for(int n1:part1Res){
                     for(int n2:part2Res){
                         int sum =0;
-                        if(sum == '+')
+                        if(c == '+')
                             sum = n1+n2;
                         else if(c == '-')
                             sum = n1-n2;
