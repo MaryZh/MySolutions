@@ -8,7 +8,7 @@
  * }
  */
 public class Solution {
-    HashMap<TreeNode, Integer> map = new HashMap<>();  // store (root, result) for substree starting with root
+    HashMap<TreeNode, Integer> map = new HashMap<>();  // store (root, result) for substree starting with root to prune repearted subtree
     
     public int rob(TreeNode root) {
         if(root == null)
