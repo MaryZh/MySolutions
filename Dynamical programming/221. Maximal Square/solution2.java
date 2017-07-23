@@ -21,7 +21,7 @@ public class Solution {
                     pre = temp;
                 }
                 else
-                    dp[j]=0;   // we need this line otherwise dp[j] remains to be the result for the previous line
+                    dp[j]=0;   // we need this line otherwise dp[j] remains to be the result for the previous row
             }
         }
         return maxside*maxside;
