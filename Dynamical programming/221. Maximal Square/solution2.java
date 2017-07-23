@@ -20,6 +20,8 @@ public class Solution {
                     maxside = Math.max(maxside, dp[j]);
                     pre = temp;
                 }
+                else
+                    dp[j]=0;   // we need this line otherwise dp[j] remains to be the result for the previous line
             }
         }
         return maxside*maxside;
