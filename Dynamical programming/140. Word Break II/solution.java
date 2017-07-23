@@ -1,3 +1,5 @@
+// 30 ms
+
 public class Solution {
     HashMap<String, List<String>> map =  new HashMap<>();
     
