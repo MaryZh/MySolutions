@@ -1,4 +1,4 @@
-// Recursive. Time: O(slen*tlen).
+// Recursive. Time: O(slen*tlen). 47ms.
 
 public class Solution {
     public boolean isSubsequence(String s, String t) {
