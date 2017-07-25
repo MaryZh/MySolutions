@@ -1,3 +1,5 @@
+// Time: O(n). Space: O(n).
+
 public class Solution {
     public int wiggleMaxLength(int[] nums) {
         int n=nums.length;
