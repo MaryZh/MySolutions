@@ -3,9 +3,9 @@ public class Solution {
         List<List<Integer>> adj =  new ArrayList<>();
         boolean[] marked =  new boolean[numCourses];
         boolean[] onstack = new boolean[numCourses];
-         for(int v=0; v<numCourses; v++)
-             adj.add( new ArrayList<Integer>() );
-        
+        for(int v=0; v<numCourses; v++)
+            adj.add( new ArrayList<Integer>() );
+        // create graph
         int n=prerequisites.length;
         for(int i=0; i<n; i++){
             adj.get(prerequisites[i][1]).add(prerequisites[i][0]);
