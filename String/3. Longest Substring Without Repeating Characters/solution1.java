@@ -1,7 +1,5 @@
 // sliding window method: for [i,j), extend j until j is alreay contained in the range; then we are done with i, and increase i.
 // Say j is the same as j' which is in [i,j), then increase i to i=j'+1.
-//
-// TLE. Time: O(n).
 
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
@@ -15,13 +13,13 @@ public class Solution {
             char c = s.charAt(j);
             if(map.containsKey(c)){ // when we get repeated c
                 // update i to j'+1
-                i = Math.max(map.get(c)+1,i); // use max because we didn't remove i to j' -th elements
+                i = Math.max(map.get(c),i); // use max because we didn't remove i to j' -th elements
                 // don't update res here(see explanation below)
             }
             // update result; only need to update res when there's repeated c, or reach end of s(put this here to take of this later case)
             res = Math.max(res, j-i+1); // the length of [i,j) is j-i+1
             // either j is repeated or not
-            map.put(c, j);
+            map.put(c, j+1);
         }
         
         return res;
