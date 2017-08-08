@@ -1,6 +1,6 @@
 public class Solution {  
     public List<String> letterCombinations(String digits) {
-        Map<Character, String> map = new HashMap<>();
+        Map<Character, String> map = new HashMap<>();   // can also use String[] with 1-9 being the index
         map.put('2', "abc");
         map.put('3', "def");
         map.put('4', "ghi");
