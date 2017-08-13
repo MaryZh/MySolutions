@@ -18,7 +18,7 @@ public class Solution {
         TreeNode p = root;  // p is the next node to be visited
         
         while( ! stack.isEmpty() || p !=null ){
-            // if( p != null){
+            // if( p != null){  // this works as well
             //     stack.push(p);  // put a node in the stack(so that can visit it's right child latter)
             //     res.add(p.val); // visit the node
             //     p = p.left; // vistit the node's left child
