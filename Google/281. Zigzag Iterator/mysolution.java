@@ -36,3 +36,4 @@ public class ZigZagIterator {
 	public boolean hasNext() {
 		return nextVector<total;
 	}
+}
