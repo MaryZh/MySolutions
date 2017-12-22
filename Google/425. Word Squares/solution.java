@@ -1,3 +1,8 @@
+// idea is that for a valid word square, Aij=Aji
+// can check the validity along the way of building it.
+// The 2nd word must start with A11; 3rd word must start with A12A22, ...
+// So can build a trie, with node has words starting with prefix
+
 public class Solution {
 	// trie
 	public class Trie{
