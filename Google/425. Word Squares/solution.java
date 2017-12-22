@@ -79,5 +79,5 @@ public class Solution {
 			templist.add(nextWord);
 			build(trie, res, templist, n);
 			templist.remove(templist.size()-1);
-		}
+	}
 }
