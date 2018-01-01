@@ -26,5 +26,5 @@ public class Solution {
 			res.add(next+"->"+upper);
 			
 		return res;
-  }
+	}
 }
