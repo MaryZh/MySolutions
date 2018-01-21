@@ -13,19 +13,26 @@ public Class Solution {
         return nodes;
     }
     public void leftBoundary(TreeNode root) {
-        if(root == null || (root.left == null && root.right == null)) return;
-        nodes.add(root.val);
-        if(root.left == null) leftBoundary(root.right);
-        else leftBoundary(root.left);
+        if(root == null || (root.left == null && root.right == null))   // don't add leaves(to avoid duplicates) 
+            return;
+        nodes.add(root.val);    // add before traverse to left/right subtree
+        if(root.left == null)
+            leftBoundary(root.right);
+        else 
+            leftBoundary(root.left);
     }
     public void rightBoundary(TreeNode root) {
-        if(root == null || (root.right == null && root.left == null)) return;
-        if(root.right == null)rightBoundary(root.left);
-        else rightBoundary(root.right);
+        if(root == null || (root.right == null && root.left == null))   // don't add leaves(to avoid duplicates)
+            return;
+        if(root.right == null)
+            rightBoundary(root.left);
+        else 
+            rightBoundary(root.right);
         nodes.add(root.val); // add after child visit(reverse)
     }
     public void leaves(TreeNode root) {
-        if(root == null) return;
+        if(root == null) 
+            return;
         if(root.left == null && root.right == null) {
             nodes.add(root.val);
             return;
