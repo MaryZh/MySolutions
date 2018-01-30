@@ -32,13 +32,13 @@ public class Solution {
         skip[7][9] = skip[9][7] = 8;
         skip[1][9] = skip[9][1] = skip[2][8] = skip[8][2] = skip[3][7] = skip[7][3] = skip[4][6] = skip[6][4] = 5;
         boolean marked[] = new boolean[10];
-        int rst = 0;
-        // DFS search each length from m to n
-        for(int i = m; i <= n; ++i) {
-            rst += DFS(marked, skip, 1, i - 1) * 4;    // 1, 3, 7, 9 are symmetric
-            rst += DFS(markeds, skip, 2, i - 1) * 4;    // 2, 4, 6, 8 are symmetric
-            rst += DFS(marked, skip, 5, i - 1);        // 5
+        int res = 0;
+        // keys=m~n, so steps = m-1 ~ n-1
+        for(int i = m-1; i <= n-1; ++i) {
+            res += DFS(marked, skip, 1, i) * 4;    // 1, 3, 7, 9 are symmetric
+            res += DFS(markeds, skip, 2, i) * 4;    // 2, 4, 6, 8 are symmetric
+            res += DFS(marked, skip, 5, i);        // 5
         }
-        return rst;
+        return res;
     }
 }
