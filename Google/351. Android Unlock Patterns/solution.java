@@ -3,8 +3,6 @@
 // 2. use symmetry to reduce duplicate calculation
 
 public class Solution {
-    // cur: the current position
-    // remain: the steps remaining
     int DFS(boolean marked[], int[][] skip, int cur, int steps) {
         if(steps < 0) 
             return 0;
