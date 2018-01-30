@@ -5,20 +5,22 @@
 public class Solution {
     // cur: the current position
     // remain: the steps remaining
-    int DFS(boolean vis[], int[][] skip, int cur, int remain) {
-        if(remain < 0) return 0;
-        if(remain == 0) return 1;
-        vis[cur] = true;
-        int rst = 0;
+    int DFS(boolean marked[], int[][] skip, int cur, int steps) {
+        if(steps < 0) 
+            return 0;
+        if(steps == 0) 
+            return 1;
+        marked[cur] = true;
+        int res = 0;
         // neighbor can be any site except for itself
         for(int i = 1; i <= 9; ++i) {
-            // If vis[i] is not visited and (two numbers are adjacent or skip number is already visited)
-            if(!vis[i] && (skip[cur][i] == 0 || (vis[skip[cur][i]]))) {
-                rst += DFS(vis, skip, i, remain - 1);
+            // If marked[i] is not visited and (two numbers are adjacent or skip number is already visited)
+            if(!marked[i] && (skip[cur][i] == 0 || (marked[skip[cur][i]]))) {
+                res += DFS(marked, skip, i, steps - 1);
             }
         }
-        vis[cur] = false;
-        return rst;
+        marked[cur] = false;
+        return res;
     }
     
     public int numberOfPatterns(int m, int n) {
@@ -29,13 +31,13 @@ public class Solution {
         skip[3][9] = skip[9][3] = 6;
         skip[7][9] = skip[9][7] = 8;
         skip[1][9] = skip[9][1] = skip[2][8] = skip[8][2] = skip[3][7] = skip[7][3] = skip[4][6] = skip[6][4] = 5;
-        boolean vis[] = new boolean[10];
+        boolean marked[] = new boolean[10];
         int rst = 0;
         // DFS search each length from m to n
         for(int i = m; i <= n; ++i) {
-            rst += DFS(vis, skip, 1, i - 1) * 4;    // 1, 3, 7, 9 are symmetric
-            rst += DFS(vis, skip, 2, i - 1) * 4;    // 2, 4, 6, 8 are symmetric
-            rst += DFS(vis, skip, 5, i - 1);        // 5
+            rst += DFS(marked, skip, 1, i - 1) * 4;    // 1, 3, 7, 9 are symmetric
+            rst += DFS(markeds, skip, 2, i - 1) * 4;    // 2, 4, 6, 8 are symmetric
+            rst += DFS(marked, skip, 5, i - 1);        // 5
         }
         return rst;
     }
